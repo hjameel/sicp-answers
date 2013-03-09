@@ -1,0 +1,4 @@
+Exercise 1.6
+
+new-if follows the applicative rules for procedure evaluation, so all arguments
+are evaluated before it is applied, including the recursive call to sqrt-iter.
