@@ -1,12 +1,6 @@
 #lang racket
 ; Exercise 1.8
 
-(define (square x)
-  (* x x))
-
-(define (cube x)
-  (* x x x))
-
 (define (cube-root x)
   (define (cube-root-iter guess old-guess x)
     (if (good-enough? guess old-guess x)
@@ -20,6 +14,12 @@
           (* 2 guess))
        3))
   (cube-root-iter 1.0 100.0 x))
+
+(define (square x)
+  (* x x))
+
+(define (cube x)
+  (* x x x))
 
 
 ; Test
