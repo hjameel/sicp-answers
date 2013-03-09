@@ -1,5 +1,5 @@
 #lang racket
-; Exercise 1.3
+;; Exercise 1.3
 
 (define (square x) (* x x))
 
@@ -12,7 +12,7 @@
          ((<= y z) (sum-of-squares x z))
          (else (sum-of-squares x y))))
 
-; Tests
+;; Tests
 (= (sum-of-squares-of-larger-two-numbers 1 2 3) (+ 4 9))
 (= (sum-of-squares-of-larger-two-numbers -1 -2 -3) (+ 1 4))
 (= (sum-of-squares-of-larger-two-numbers 3 3 3) (+ 9 9))

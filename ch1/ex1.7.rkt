@@ -1,5 +1,5 @@
 #lang racket
-; Exercise 1.7
+;; Exercise 1.7
 
 (define (sqrt x)
   (sqrt-iter 1.0 100.0 x))
@@ -24,6 +24,6 @@
 (define (square x)
   (* x x))
 
-; Test
+;; Test
 (< (abs (- (sqrt 9) 3))
    0.001)

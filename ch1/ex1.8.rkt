@@ -1,5 +1,5 @@
 #lang racket
-; Exercise 1.8
+;; Exercise 1.8
 
 (define (cube-root x)
   (define (cube-root-iter guess old-guess x)
@@ -22,7 +22,7 @@
   (* x x x))
 
 
-; Test
+;; Test
 (define (test-cube-root-within-tolerance test-val tolerance)
   (< (abs (- (cube-root (cube test-val))
              test-val))
