@@ -19,7 +19,6 @@
     (/ (+ (/ x (square guess))
           (* 2 guess))
        3))
-
   (cube-root-iter 1.0 100.0 x))
 
 
