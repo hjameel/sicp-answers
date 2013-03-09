@@ -8,6 +8,8 @@
         (else (A (- x 1)
                  (A x (- y 1))))))
 
+;; Part 1
+
 "Expression 1"
 (A 1 10)
 (A 0 (A 1 9))
@@ -87,3 +89,31 @@
 (A 2 4)
 ;; from above:
 65536
+
+
+;; Part 2
+
+(define (f n) (A 0 n))
+;; f(n) = 2n
+
+(define (g n) (A 1 n))
+;; g(n) = 2^n
+
+(define (h n) (A 2 n))
+;; i.e. for n > 1 we get
+;;   (A 1 (A 2 (- n 1))
+;; We know (A 1 n) is 2^n
+;; Therefore for n > 1 we have:
+;;     h(n) = 2^(A(2, n-1))
+;;     h(n) = 2^(h(n-1))
+;; The exponent will evaluate to 2 if n = 2. If n > 2 it will expand in the
+;; same way.
+;; We therefore repeatedly apply powers of 2 as n increases.
+
+;;        |0 if n = 0
+;; h(n) = |2 if n = 1
+;;        |2^2... n - 1 times if n > 1
+
+;; e.g. h(2) = 2^2
+;;      h(3) = 2^2^2
+;;      h(4) = 2^2^2^2
