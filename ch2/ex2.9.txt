@@ -1,0 +1,41 @@
+Exercise 2.9
+
+Part 1:
+
+The width of an interval can be given by:
+    w = (u - l) / 2
+where u = upper bound
+      l = lower bound
+
+The sum of two intervals is given by:
+    (l1, u1) + (l2, u2) = (l1 + l2, u1 + u2)
+
+where (lower bound, upper bound) describes an interval.
+
+The widths of the two intervals we are adding are given by:
+    w1 = (u1 - l1) / 2
+    w2 = (u2 - l2) / 2
+
+
+The width of the result of summing two intervals is therefore:
+    w = ((u1 + u2) - (l1 + l2)) / 2
+      = (u1 - l1 + u2 - l2) / 2
+      = (u1 - l2) / 2 + (u2 - l2) / 2
+      = w1 + w2
+
+So we can see that the width of the result of the addition of two intervals is
+given by the sum of the widths of those intervals.
+
+
+Part 2:
+
+We can show that width of the result of a multiplication is not a function of
+only the widths of the two operands by giving an example of two cases where the
+input operands have the same width but the outputs have different widths.
+
+e.g. here the inputs all have width 1
+    (1, 2) * (1, 2) = (1, 4)
+output has width 3/2
+
+    (0, 1) * (0, 1) = (0, 1)
+output has width 1/2
