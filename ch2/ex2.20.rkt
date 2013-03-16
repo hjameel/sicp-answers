@@ -23,3 +23,5 @@
               (same-parity 2 3))
 (equal-lists? (list 2 4)
               (same-parity 2 3 4 5))
+(equal-lists? (list 1 3 5)
+              (same-parity 1 3 4 5))
