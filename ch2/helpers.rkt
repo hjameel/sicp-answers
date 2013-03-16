@@ -6,5 +6,8 @@
          ((= (car list1) (car list2)) (equal-lists? (cdr list1) (cdr list2)))
          (else #f)))
 
+(define (square x)
+  (* x x))
+
 ;; Provide
-(provide equal-lists?)
+(provide equal-lists? square)
