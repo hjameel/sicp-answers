@@ -9,5 +9,9 @@
 (define (square x)
   (* x x))
 
+(define nil '())
+
 ;; Provide
-(provide equal-lists? square)
+(provide equal-lists?
+         square
+         nil)
