@@ -27,10 +27,19 @@
               nil
               (map proc seq)))
 
+(define (prime? x)
+  (define (prime-iter curr)
+    (cond ((< x 2) #f)
+          ((> (square curr) x) #t)
+          ((= 0 (remainder x curr)) #f)
+          (else (prime-iter (+ curr 1)))))
+  (prime-iter 2))
+
 ;; Provide
 (provide equal-lists?
          square
          nil
          accumulate
          enumerate-interval
-         flatmap)
+         flatmap
+         prime?)

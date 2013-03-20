@@ -1,4 +1,4 @@
-#lang planet neil/sicp
+#lang racket
 ;; Exercise 2.40
 
 (require "helpers.rkt")
@@ -27,4 +27,5 @@
                (unique-pairs n))))
 
 ;; Test
-(unique-pairs 6)
+(unique-pairs 5)
+(prime-sum-pairs 5)
