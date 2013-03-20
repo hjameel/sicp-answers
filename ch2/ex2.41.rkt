@@ -18,9 +18,7 @@
 (define (sum-triples s)
   (filter (lambda (x)
             (= s
-               (+ (car x)
-                  (cadr x)
-                  (caddr x))))
+               (accumulate + 0 x)))
           (unique-triples s)))
 
 ;; Tests
