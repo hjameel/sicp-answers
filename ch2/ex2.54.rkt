@@ -9,4 +9,4 @@
 ;; Tests
 (equal? 1 1)
 (equal? '(1) '(1))
-(equal? '(1) 1)
+(not (equal? '(1) 1))
